@@ -15,7 +15,8 @@
         
         <CheckBox Content="HideChkBox" HorizontalAlignment="Left" Margin="767,409,0,0" VerticalAlignment="Top"/>
 
-      
+        <Label x:Name="lblSoundStatus" Content="Sound Detected!" Visibility="Hidden"/>
+
 
 
     </Grid>

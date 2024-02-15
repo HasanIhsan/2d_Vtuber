@@ -46,10 +46,22 @@ namespace vtuber_2D
                 {
                     capture.DataAvailable += (s, args) =>
                     {
-                        // Check audio data here and update UI accordingly
-                        // For example, you can update a label or change the color of a button
-                        // based on the audio level.
-                        Debug.WriteLine("has audio");
+                        // Check audio data here
+                        float maxVolume = 0;
+
+                        // Analyze audio data to get the maximum volume
+                        for (int i = 0; i < args.BytesRecorded; i += 2)
+                        {
+                            short sample = BitConverter.ToInt16(args.Buffer, i);
+                            float sample32 = sample / 32768f;
+                            if (Math.Abs(sample32) > maxVolume)
+                            {
+                                maxVolume = Math.Abs(sample32);
+                            }
+                        }
+
+                        // Set the label visibility based on the audio level
+                        lblSoundStatus.Visibility = (maxVolume > 0.1) ? Visibility.Visible : Visibility.Hidden;
                     };
 
                     capture.StartRecording();
