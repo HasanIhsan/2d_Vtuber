@@ -65,6 +65,7 @@ namespace vtuber2d
 
 
         //this migt be used for something for later
+        //maybe at a later date i can add a ai chatbot...
         private void SpeechRecognitionEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             // This method is called when speech is recognized
