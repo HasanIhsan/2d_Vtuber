@@ -1,10 +1,13 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Speech.Recognition;
 using System.Windows;
 using System.Windows.Threading;
+using vtuber2d.speechRecog;
+using vtuber2d.storing_Pictures;
 
 
 namespace vtuber2d
@@ -16,81 +19,55 @@ namespace vtuber2d
     {
         private SpeechRecognitionEngine speechRecognitionEngine;
         private bool isListening = false;
-
-        public ObservableCollection<string> InputDevices { get; set; } = new ObservableCollection<string>();
+        private OpenFileDialog _openFileDialog;
+        private pictures _picturesInstance = new pictures();
+        private SpeechRecognition _speechReco;
+      
+        //public ObservableCollection<string> InputDevices { get; set; } = new ObservableCollection<string>();
 
         public MainWindow()
         {
             InitializeComponent();
-            LoadInputDevices();
-            InitializeSpeechRecognition();
+            _speechReco = new SpeechRecognition(this, audioLabel, notTalkingImage, _picturesInstance);
+            // LoadInputDevices();
+            inputDevicesComboBox.ItemsSource = _speechReco.LoadInputDevices(); //does putting this here make it slower?
+                                                                               
+            _speechReco.InitializeSpeechRecognition(); // InitializeSpeechRecognition();
         }
 
-        private void LoadInputDevices()
+        private void notTalkingbtn_Click(object sender, RoutedEventArgs e)
         {
-            var devices = System.Speech.Recognition.SpeechRecognitionEngine.InstalledRecognizers();
+            Debug.WriteLine("not takling clicked");
 
-            foreach (var device in devices)
-            {
-                InputDevices.Add(device.Description);
-            }
 
-            inputDevicesComboBox.ItemsSource = InputDevices;
+            _picturesInstance.setimageN();
+            notTalkingImage.Source = new System.Windows.Media.Imaging.BitmapImage(new System.Uri(_picturesInstance.notTalkingPicture));
         }
 
-        private void InitializeSpeechRecognition()
+        private void Talkingbtn_Click(object sender, RoutedEventArgs e)
         {
-            speechRecognitionEngine = new SpeechRecognitionEngine();
-            speechRecognitionEngine.SpeechRecognized += SpeechRecognitionEngine_SpeechRecognized;
-            speechRecognitionEngine.AudioLevelUpdated += SpeechRecognitionEngine_AudioLevelUpdated;
-
-            // Add any additional grammar or configuration as needed
-            var grammar = new DictationGrammar();
-            speechRecognitionEngine.LoadGrammar(grammar);
-        }
-        private void SpeechRecognitionEngine_AudioLevelUpdated(object sender, AudioLevelUpdatedEventArgs e)
-        {
-            // Adjust the threshold value as needed based on your audio input
-            if (e.AudioLevel > 0.1)
-            {
-                // Audio detected, show the label
-                Dispatcher.Invoke(() => { audioLabel.Visibility = Visibility.Visible; });
-            }
-            else
-            {
-                // No audio, hide the label
-                Dispatcher.Invoke(() => { audioLabel.Visibility = Visibility.Hidden; });
-            }
-        }
+            Debug.WriteLine("talking btn clicked");
 
 
-        //this migt be used for something for later
-        //maybe at a later date i can add a ai chatbot...
-        private void SpeechRecognitionEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
-        {
-            // This method is called when speech is recognized
-            Debug.WriteLine ($"Speech Recognized: {e.Result.Text}");
+            _picturesInstance.setImageT();
+            // Add debug prints to check if talkingPicture is being set
+            //Debug.WriteLine($"talkingPicture: {_picturesInstance.talkingPicture}");
+            //Debug.WriteLine($"getImageT result: {_picturesInstance.getImageT()}");
         }
+       
+
+      
 
         private void SelectInputDevice_Click(object sender, RoutedEventArgs e)
         {
             string selectedDeviceName = inputDevicesComboBox.SelectedItem as string;
 
+
             if (!string.IsNullOrEmpty(selectedDeviceName))
             {
-                // Stop listening to the previous device, if any
-                if (isListening)
-                {
-                    speechRecognitionEngine.RecognizeAsyncCancel();
-                    isListening = false;
-                }
-
-                // Set up the new speech recognition engine for the selected device
-                speechRecognitionEngine.SetInputToDefaultAudioDevice();
-                speechRecognitionEngine.RecognizeAsync(RecognizeMode.Multiple);
-
+              
+                _speechReco.select_speechDevice(isListening, selectedDeviceName);
                 MessageBox.Show($"Selected Input Device: {selectedDeviceName}");
-                isListening = true;
             }
             else
             {
