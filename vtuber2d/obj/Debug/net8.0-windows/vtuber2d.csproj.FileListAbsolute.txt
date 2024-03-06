@@ -28,3 +28,7 @@ C:\Users\yuki\Desktop\code_stuff\Vtuber_2D\vtuber2d\vtuber2d\bin\Debug\net8.0-wi
 C:\Users\yuki\Desktop\code_stuff\Vtuber_2D\vtuber2d\vtuber2d\obj\Debug\net8.0-windows\Interop.SpeechLib.dll
 C:\Users\yuki\Desktop\code_stuff\Vtuber_2D\vtuber2d\vtuber2d\obj\Debug\net8.0-windows\vtuber2d.csproj.ResolveComReference.cache
 C:\Users\yuki\Desktop\code_stuff\Vtuber_2D\vtuber2d\vtuber2d\bin\Debug\net8.0-windows\Interop.SpeechLib.dll
+C:\Users\yuki\Desktop\code_stuff\Vtuber_2D\vtuber2d\vtuber2d\obj\Debug\net8.0-windows\Screens\SetupScreen.g.cs
+C:\Users\yuki\Desktop\code_stuff\Vtuber_2D\vtuber2d\vtuber2d\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\yuki\Desktop\code_stuff\Vtuber_2D\vtuber2d\vtuber2d\obj\Debug\net8.0-windows\Screens\SetupScreen.baml
+C:\Users\yuki\Desktop\code_stuff\Vtuber_2D\vtuber2d\vtuber2d\obj\Debug\net8.0-windows\ViewModelDataTemplates.baml

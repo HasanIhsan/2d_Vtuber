@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using vtuber2d.Screens;
 using vtuber2d.storing_Pictures;
 
 namespace vtuber2d.speechRecog
@@ -20,7 +21,7 @@ namespace vtuber2d.speechRecog
         public static SpeechRecognitionEngine speechRecognitionEngine;
 
 
-        private MainWindow mainWindow;
+        private SetupScreen mainWindow;
         private Label audioLabel;
         private Image notTalkingImage;
 
@@ -28,7 +29,7 @@ namespace vtuber2d.speechRecog
         private pictures _picturesInstance;
         private OpenFileDialog _openFileDialog;
 
-        public SpeechRecognition(MainWindow mainWindow, Label audioLabel, Image notTalkingImage, pictures pictureInstance)
+        public SpeechRecognition(SetupScreen mainWindow, Label audioLabel, Image notTalkingImage, pictures pictureInstance)
         {
             this.mainWindow = mainWindow;
             this.audioLabel = audioLabel;
