@@ -10,13 +10,13 @@ namespace vtuber2d.viewmodels
 {
     public class SetupScreenViewModel : ViewModelBase
     {
-        private RelayCommand? _navigateToSetupCOmmand;
+        private RelayCommand? _navigateToMainScreenCOmmand;
 
-        public RelayCommand NavigateToSetupCOmmand
+        public RelayCommand NavigateToMainScreenCOmmand
         {
             get
             {
-                return _navigateToSetupCOmmand ?? (_navigateToSetupCOmmand = new RelayCommand(NavigationHandler.GetNavigationAction("setup_Screen")));
+                return _navigateToMainScreenCOmmand ?? (_navigateToMainScreenCOmmand = new RelayCommand(NavigationHandler.GetNavigationAction("main_Screen")));
             }
         }
     }

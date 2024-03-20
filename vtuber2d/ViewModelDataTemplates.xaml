@@ -8,6 +8,10 @@
         <views:SetupScreen />
     </DataTemplate>
 
+  <DataTemplate DataType="{x:Type viewmodels:MainScreenViewModel}">
+    <views:MainScreen/>
+  </DataTemplate>
+
    
 
 </ResourceDictionary>

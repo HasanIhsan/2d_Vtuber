@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media.Imaging;
 using vtuber2d.Screens;
 using vtuber2d.storing_Pictures;
 
@@ -21,26 +22,26 @@ namespace vtuber2d.speechRecog
         public static SpeechRecognitionEngine speechRecognitionEngine;
 
 
-        private SetupScreen mainWindow;
+        private MainScreen mainWindow;
         private Label audioLabel;
-        private Image notTalkingImage;
+        private Image vtuberImage;
 
 
-        private pictures _picturesInstance;
+      
         private OpenFileDialog _openFileDialog;
 
-        public SpeechRecognition(SetupScreen mainWindow, Label audioLabel, Image notTalkingImage, pictures pictureInstance)
+        public SpeechRecognition(MainScreen mainWindow, Label audioLabel, Image vtuberImage)
         {
             this.mainWindow = mainWindow;
             this.audioLabel = audioLabel;
-            this.notTalkingImage = notTalkingImage;
-            this._picturesInstance = pictureInstance;
+            this.vtuberImage = vtuberImage;
+           
         }
 
         //loads the input devices for the speech recogination
         public ObservableCollection<string> LoadInputDevices()
         {
-            var devices = System.Speech.Recognition.SpeechRecognitionEngine.InstalledRecognizers();
+            var devices = SpeechRecognitionEngine.InstalledRecognizers();
 
             foreach (var device in devices)
             {
@@ -72,8 +73,8 @@ namespace vtuber2d.speechRecog
         private void SpeechRecognitionEngine_AudioLevelUpdated(object sender, AudioLevelUpdatedEventArgs e)
         {
 
-            Debug.WriteLine(_picturesInstance.notTalkingPicture);
-            Debug.WriteLine(_picturesInstance.talkingPicture);
+           //Debug.WriteLine(pictures.Instance.notTalkingPicture);
+           //Debug.WriteLine(pictures.Instance.talkingPicture);
 
             mainWindow.Dispatcher.Invoke(() => {
                 // Adjust the threshold value as needed based on your audio input
@@ -82,10 +83,10 @@ namespace vtuber2d.speechRecog
                     // Audio detected, show the label
                     audioLabel.Visibility = Visibility.Visible;
 
-                    Debug.WriteLine(_picturesInstance.getImageT());
+                    Debug.WriteLine(pictures.Instance.getImageT());
                    
                       //  Debug.WriteLine($"not null {_picturesInstance.talkingPicture}");
-                       notTalkingImage.Source = new System.Windows.Media.Imaging.BitmapImage(new System.Uri(_picturesInstance.getImageT()));
+                       vtuberImage.Source = new BitmapImage(new Uri(pictures.Instance.getImageT()));
                     
                 }
                 else
@@ -95,7 +96,7 @@ namespace vtuber2d.speechRecog
 
                     
                       //  Debug.WriteLine($"not null {_picturesInstance.notTalkingPicture}");
-                        notTalkingImage.Source = new System.Windows.Media.Imaging.BitmapImage(new System.Uri(_picturesInstance.getimageN()));
+                        vtuberImage.Source = new BitmapImage(new Uri(pictures.Instance.getimageN()));
                     
                 }
             });

@@ -10,15 +10,30 @@ namespace vtuber2d.storing_Pictures
 {
     public class pictures
     {
+        private static pictures _pictureInstance;
 
         private OpenFileDialog _openFileDialog;
 
 
         public string openDialogFilter = "Image files (*.png;*.jpg;*.jpeg)|*.png;*.jpg;*.jpeg|All files (*.*)|*.*";
 
-        public string notTalkingPicture { get; set; } = "no value set N";
-        public string talkingPicture { get; set; } = "no value set T";
+        private string notTalkingPicture { get; set; } = "no value set N";
+        private string talkingPicture { get; set; } = "no value set T";
          
+
+        //creating a singleton to make the variable accesable to all files
+        //rather then passing the same variable over and over again
+        public static pictures Instance
+        {
+            get
+            {
+                if(_pictureInstance == null)
+                {
+                    _pictureInstance = new pictures();
+                }
+                return _pictureInstance;
+            }
+        }
 
 
         public void setImageT()
@@ -32,7 +47,7 @@ namespace vtuber2d.storing_Pictures
                 talkingPicture = _openFileDialog.FileName;
 
                 Debug.WriteLine(talkingPicture);
-                // TalkingImage.Source = new System.Windows.Media.Imaging.BitmapImage(new System.Uri(_picturesInstance.talkingPicture));
+                // TalkingImage.Source = new BitmapImage(new Uri(_picturesInstance.talkingPicture));
             }
         }
 
@@ -47,17 +62,17 @@ namespace vtuber2d.storing_Pictures
                 notTalkingPicture = _openFileDialog.FileName;
 
                 //set image source:
-               // notTalkingImage.Source = new System.Windows.Media.Imaging.BitmapImage(new System.Uri(_picturesInstance.notTalkingPicture));
+               // notTalkingImage.Source = new BitmapImage(new Uri(_picturesInstance.notTalkingPicture));
             }
         }
 
-        public string getImageT()
+        public  string getImageT()
         {
 
             return talkingPicture;
         }
 
-        public string getimageN()
+        public   string getimageN()
         {
             return notTalkingPicture;
         }

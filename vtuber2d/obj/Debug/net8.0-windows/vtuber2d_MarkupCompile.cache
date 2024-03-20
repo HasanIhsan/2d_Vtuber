@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\yuki\Desktop\code_stuff\Vtuber_2D\vtuber2d\vtuber2d\App.xaml
-3-253212336
+4-437159749
 
-13-1793743103
+15-2144451634
 202-781328120
-MainWindow.xaml;Screens\SetupScreen.xaml;ViewModelDataTemplates.xaml;
+MainWindow.xaml;Screens\MainScreen.xaml;Screens\SetupScreen.xaml;ViewModelDataTemplates.xaml;
 
 False
 

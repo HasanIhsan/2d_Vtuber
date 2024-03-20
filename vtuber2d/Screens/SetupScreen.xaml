@@ -6,20 +6,18 @@
              xmlns:local="clr-namespace:vtuber2d.Screens"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <ComboBox x:Name="inputDevicesComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
-            <!-- The items will be added dynamically in code-behind -->
-        </ComboBox>
-        <Button Content="Select Input Device" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,30,0,0" Click="SelectInputDevice_Click"/>
+    <Grid Background="white">
+         
         <Label x:Name="audioLabel" Content="Audio Detected" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="204,21,0,0" Visibility="Hidden"/>
         <Button x:Name="Talkingbtn" Content="Talking Picture" HorizontalAlignment="Left" Margin="639,91,0,0" VerticalAlignment="Top" Height="31" Width="139" Click="Talkingbtn_Click"/>
 
         <Button x:Name="notTalkingbtn" Content="Pick not Talking Picture" HorizontalAlignment="Left" Margin="578,34,0,0" VerticalAlignment="Top" Height="32" Width="200" Click="notTalkingbtn_Click"/>
-        <Image x:Name="notTalkingImage" HorizontalAlignment="Left" Height="342" Margin="10,66,0,0" VerticalAlignment="Top" Width="563"/>
-        <!-- <Image x:Name="TalkingImage" HorizontalAlignment="Left" Height="180" Margin="309,178,0,0" VerticalAlignment="Top" Width="276"/> -->
+        <Image x:Name="notTalkingImage" HorizontalAlignment="Left" Height="175" Margin="10,122,0,0" VerticalAlignment="Top" Width="338"/>
+         <Image x:Name="TalkingImage" HorizontalAlignment="Left" Height="180" Margin="357,122,0,0" VerticalAlignment="Top" Width="276"/> 
 
         <!--
         <Button Content="Navigate to UserControlB" Command="{Binding NavigateToBCommand}" Margin="126,297,126,64"/> -->
+        <Button Content="MainScreen" Command="{Binding NavigateToMainScreenCOmmand}" Margin="578,345,22,44" />
 
     </Grid>
 </UserControl>
