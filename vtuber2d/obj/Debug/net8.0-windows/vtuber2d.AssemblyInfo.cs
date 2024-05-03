@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("vtuber2d")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d4c48f96e423b7529ab45961766f576fa84739cd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b7edb3d17d78a94c081a10bf4ae797dd1276560e")]
 [assembly: System.Reflection.AssemblyProductAttribute("vtuber2d")]
 [assembly: System.Reflection.AssemblyTitleAttribute("vtuber2d")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

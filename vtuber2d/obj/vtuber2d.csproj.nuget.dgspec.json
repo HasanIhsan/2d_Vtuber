@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yuki\\Desktop\\code_stuff\\Vtuber_2D\\vtuber2d\\vtuber2d\\vtuber2d.csproj": {}
+    "D:\\Code_Stuff\\projects\\code_stuff\\Vtuber_2D\\vtuber2d\\vtuber2d\\vtuber2d.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yuki\\Desktop\\code_stuff\\Vtuber_2D\\vtuber2d\\vtuber2d\\vtuber2d.csproj": {
+    "D:\\Code_Stuff\\projects\\code_stuff\\Vtuber_2D\\vtuber2d\\vtuber2d\\vtuber2d.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yuki\\Desktop\\code_stuff\\Vtuber_2D\\vtuber2d\\vtuber2d\\vtuber2d.csproj",
+        "projectUniqueName": "D:\\Code_Stuff\\projects\\code_stuff\\Vtuber_2D\\vtuber2d\\vtuber2d\\vtuber2d.csproj",
         "projectName": "vtuber2d",
-        "projectPath": "C:\\Users\\yuki\\Desktop\\code_stuff\\Vtuber_2D\\vtuber2d\\vtuber2d\\vtuber2d.csproj",
-        "packagesPath": "C:\\Users\\yuki\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yuki\\Desktop\\code_stuff\\Vtuber_2D\\vtuber2d\\vtuber2d\\obj\\",
+        "projectPath": "D:\\Code_Stuff\\projects\\code_stuff\\Vtuber_2D\\vtuber2d\\vtuber2d\\vtuber2d.csproj",
+        "packagesPath": "C:\\Users\\ihsan\\.nuget\\packages\\",
+        "outputPath": "D:\\Code_Stuff\\projects\\code_stuff\\Vtuber_2D\\vtuber2d\\vtuber2d\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\yuki\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ihsan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -68,7 +73,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

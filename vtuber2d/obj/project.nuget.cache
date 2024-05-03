@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "gmUP/eMpF6fDuuS2BRWMDfJYlEaX48QltsjJwv+Xj186U79KvVZaf6dVv2+iA1R2Awu6ev9i5QFcUAJPcl+gmA==",
+  "dgSpecHash": "hyWkjGyIS0XkwJwMaqOk1oCubpYDnsKRxhZwBkOfGK57BqqSaW7ZGYNj4bYA/HsJvoDrJo//hEk8iAu/h1Rp5w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yuki\\Desktop\\code_stuff\\Vtuber_2D\\vtuber2d\\vtuber2d\\vtuber2d.csproj",
+  "projectFilePath": "D:\\Code_Stuff\\projects\\code_stuff\\Vtuber_2D\\vtuber2d\\vtuber2d\\vtuber2d.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\yuki\\.nuget\\packages\\audioswitcher.audioapi\\3.0.0\\audioswitcher.audioapi.3.0.0.nupkg.sha512",
-    "C:\\Users\\yuki\\.nuget\\packages\\audioswitcher.audioapi.coreaudio\\3.0.3\\audioswitcher.audioapi.coreaudio.3.0.3.nupkg.sha512",
-    "C:\\Users\\yuki\\.nuget\\packages\\system.speech\\8.0.0\\system.speech.8.0.0.nupkg.sha512"
+    "C:\\Users\\ihsan\\.nuget\\packages\\audioswitcher.audioapi\\3.0.0\\audioswitcher.audioapi.3.0.0.nupkg.sha512",
+    "C:\\Users\\ihsan\\.nuget\\packages\\audioswitcher.audioapi.coreaudio\\3.0.3\\audioswitcher.audioapi.coreaudio.3.0.3.nupkg.sha512",
+    "C:\\Users\\ihsan\\.nuget\\packages\\system.speech\\8.0.0\\system.speech.8.0.0.nupkg.sha512"
   ],
   "logs": [
     {
