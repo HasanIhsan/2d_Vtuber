@@ -34,7 +34,8 @@ This project is basically a prototype for a PNG v-tuber program.
 1. Explain how to install your project.
 	- if you wish to try out the program for yourself, simply download the project, and locate the Debug folder bin/bebug/net8.0
 	- and run the vtuber2d exe file
-	- ![[Pasted image 20240503115704.png]]
+	- ![Pasted image 20240503115704](https://github.com/HasanIhsan/2d_Vtuber/assets/49534968/7d9d4d40-41a3-4ab7-bf51-7843030e3762)
+
 	
 1. Provide any prerequisites or dependencies.
 	- you shouldn’t really need anything.
