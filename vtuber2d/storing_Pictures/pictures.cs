@@ -15,6 +15,7 @@ namespace vtuber2d.storing_Pictures
         private OpenFileDialog _openFileDialog;
 
 
+        //filter 
         public string openDialogFilter = "Image files (*.png;*.jpg;*.jpeg)|*.png;*.jpg;*.jpeg|All files (*.*)|*.*";
 
         private string notTalkingPicture { get; set; } = "no value set N";

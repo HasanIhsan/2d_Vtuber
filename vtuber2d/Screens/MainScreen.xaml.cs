@@ -27,6 +27,8 @@ namespace vtuber2d.Screens
         
        
         private bool isListening = false;
+        private bool isDragging = false;
+        private Point offset;
 
 
         private SpeechRecognition _speechReco;
@@ -62,5 +64,73 @@ namespace vtuber2d.Screens
                 MessageBox.Show("Please select an input device.");
             }
         }
+
+        // Image_MouseDown: Sets a flag indicating that the image is being dragged and stores the offset between the mouse cursor and the top-left corner of the image.
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            //set flag indicating image is being dragged
+            isDragging = true;
+
+            //store the current position of the mouse relative to the image
+            offset = e.GetPosition(vtuber);
+        }
+
+        /*
+         * Image_MouseMove: Updates the position of the image while it's being dragged.
+         * The Margin property represents the distance between the element and its parent's edges. By adjusting the margins, we can move the image within its parent container.
+         */
+        private void Image_MouseMove(object sender, MouseEventArgs e)
+        {
+            if(isDragging)
+            {
+                Debug.WriteLine("moving");
+
+                //get the current position relative to the window
+                Point currentPosition = e.GetPosition(this);
+
+                //calculate the new position based on offset
+                double newX = currentPosition.X - offset.X;
+                double newY = currentPosition.Y - offset.Y;
+
+                //update the position of the image
+                vtuber.Margin = new Thickness(newX, newY, 0, 0);
+
+                
+            }
+        }
+
+
+        // Image_MouseUp: Resets the flag when the mouse button is released, indicating that the dragging operation has ended.
+        private void Image_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            //reset the flag
+            isDragging = false;
+            Debug.WriteLine("not dragging");
+        }
+
+        //Image_MouseWheel: handle the MouseWheel event of the image.
+        /*
+         *  determine the direction of the mouse wheel scroll (e.Delta > 0 indicates scrolling up, and e.Delta < 0 indicates scrolling down).
+            calculate the new scale factor by adjusting the image width and height based on the delta value.
+            limit the minimum scale factor to prevent the image from becoming too small.
+            update the image size based on the new scale factor.
+         */
+        private void Image_MouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            //determine the direction of the mouse wheel scrool (up or down)
+            double delta = e.Delta > 0 ? 0.1 : -0.1;
+
+            //calculate the new scale factor
+            double scaleX = vtuber.Width / 179 + delta;
+            double scaleY = vtuber.Height / 153 + delta;
+
+
+            //udpate the image size
+            vtuber.Width = 179 * scaleX;
+            vtuber.Height = 153 * scaleY;
+        }
+
+       
+
     }
 }

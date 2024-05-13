@@ -70,6 +70,8 @@ namespace vtuber2d.speechRecog
           
         }
 
+
+        //SpeechRecognitionEngine_AudioLevelUpdated: change the image depending on if there is change in audio levels
         private void SpeechRecognitionEngine_AudioLevelUpdated(object sender, AudioLevelUpdatedEventArgs e)
         {
 
@@ -102,7 +104,7 @@ namespace vtuber2d.speechRecog
             });
         }
 
-     
+        //SpeechRecognitionEngine_SpeechRecognized: currently does nothing., but maybe for in the furture
         private void SpeechRecognitionEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             // This method is called when speech is recognized
