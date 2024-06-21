@@ -38,7 +38,7 @@ namespace vtuber2d.Screens
             InitializeComponent();
 
             //set inital image;
-            vtuber.Source = new BitmapImage(new Uri(pictures.Instance.getimageN()));
+            vtuber.Source = new BitmapImage(new Uri(Pictures.Instance.getimageN()));
 
             _speechReco = new SpeechRecognition(this, audioLabel, vtuber);
             // LoadInputDevices();
@@ -132,5 +132,33 @@ namespace vtuber2d.Screens
 
        
 
+       //checkBox
+       
+        //checked:
+        // change the backgroud to green
+        //and hide all the other uncessary buttons
+        private void GCheckBox_Checked (object sender, RoutedEventArgs e)
+        {
+            //GCheckBox.Content = "checked";
+            mainScreenGrid.Background = Brushes.Green;
+            SelectDeviceBtn.Visibility = Visibility.Collapsed;
+            inputDevicesComboBox.Visibility = Visibility.Collapsed;
+            audioLabel.Visibility = Visibility.Collapsed;
+            setupScreenBtn.Visibility = Visibility.Collapsed;
+        }
+
+        //unchecked:
+        //change the backgroud color back to white
+        //show all the buttons!
+        private void GCheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            //GCheckBox.Content = "unchecked";
+            mainScreenGrid.Background = Brushes.White;
+            SelectDeviceBtn.Visibility = Visibility.Visible;
+            inputDevicesComboBox.Visibility = Visibility.Visible;
+            
+            setupScreenBtn.Visibility = Visibility.Visible;
+        }
     }
+    
 }

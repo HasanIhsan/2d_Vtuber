@@ -12,6 +12,8 @@
     <views:MainScreen/>
   </DataTemplate>
 
-   
+    <DataTemplate DataType="{x:Type viewmodels:SelectScreenViewModel}">
+        <views:SelectScreen/>
+    </DataTemplate>
 
 </ResourceDictionary>

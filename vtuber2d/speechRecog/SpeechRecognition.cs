@@ -85,10 +85,10 @@ namespace vtuber2d.speechRecog
                     // Audio detected, show the label
                     audioLabel.Visibility = Visibility.Visible;
 
-                    Debug.WriteLine(pictures.Instance.getImageT());
+                    Debug.WriteLine(Pictures.Instance.getImageT());
                    
                       //  Debug.WriteLine($"not null {_picturesInstance.talkingPicture}");
-                       vtuberImage.Source = new BitmapImage(new Uri(pictures.Instance.getImageT()));
+                       vtuberImage.Source = new BitmapImage(new Uri(Pictures.Instance.getImageT()));
                     
                 }
                 else
@@ -98,7 +98,7 @@ namespace vtuber2d.speechRecog
 
                     
                       //  Debug.WriteLine($"not null {_picturesInstance.notTalkingPicture}");
-                        vtuberImage.Source = new BitmapImage(new Uri(pictures.Instance.getimageN()));
+                        vtuberImage.Source = new BitmapImage(new Uri(Pictures.Instance.getimageN()));
                     
                 }
             });

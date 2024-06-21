@@ -44,8 +44,8 @@ namespace vtuber2d.Screens
 
 
             // _picturesInstance.setimageN();
-            pictures.Instance.setimageN();
-            notTalkingImage.Source = new BitmapImage(new Uri(pictures.Instance.getimageN()));
+            Pictures.Instance.setimageN();
+            notTalkingImage.Source = new BitmapImage(new Uri(Pictures.Instance.getimageN()));
         }
 
         private void Talkingbtn_Click(object sender, RoutedEventArgs e)
@@ -54,11 +54,11 @@ namespace vtuber2d.Screens
 
 
             //_picturesInstance.setImageT();
-            pictures.Instance.setImageT();
+            Pictures.Instance.setImageT();
             // Add debug prints to check if talkingPicture is being set
             //Debug.WriteLine($"talkingPicture: {_picturesInstance.talkingPicture}");
             //Debug.WriteLine($"getImageT result: {_picturesInstance.getImageT()}");
-            TalkingImage.Source = new BitmapImage(new Uri(pictures.Instance.getImageT()));
+            TalkingImage.Source = new BitmapImage(new Uri(Pictures.Instance.getImageT()));
         }
 
 

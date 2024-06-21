@@ -18,6 +18,7 @@
         <!--
         <Button Content="Navigate to UserControlB" Command="{Binding NavigateToBCommand}" Margin="126,297,126,64"/> -->
         <Button Content="MainScreen" Command="{Binding NavigateToMainScreenCOmmand}" Margin="578,345,22,44" />
+        <Button Content="Back" Command="{Binding NavigateToSelectScreenCommand}" Margin="499,345,244,44" />
 
     </Grid>
 </UserControl>

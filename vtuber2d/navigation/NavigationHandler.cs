@@ -28,6 +28,9 @@ namespace vtuber2d.navigation
                 case "main_Screen":
                     _mainViewModel.CurrentViewModel = new MainScreenViewModel();
                     break;
+                case "select_Screen":
+                    _mainViewModel.CurrentViewModel = new SelectScreenViewModel();
+                    break;
             }
         }
 
@@ -48,6 +51,8 @@ namespace vtuber2d.navigation
                     return () => NavigaionService.NavigateTo("setup_Screen");
                 case "main_Screen":
                     return () => NavigaionService.NavigateTo("main_Screen");
+                case "select_Screen":
+                    return () => NavigaionService.NavigateTo("select_Screen");
                 default:
                     return () => { };
             }

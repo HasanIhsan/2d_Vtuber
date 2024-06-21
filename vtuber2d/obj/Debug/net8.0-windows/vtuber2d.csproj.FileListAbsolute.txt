@@ -70,3 +70,5 @@ D:\Code_Stuff\projects\code_stuff\Vtuber_2D\vtuber2d\vtuber2d\obj\Debug\net8.0-w
 D:\Code_Stuff\projects\code_stuff\Vtuber_2D\vtuber2d\vtuber2d\obj\Debug\net8.0-windows\vtuber2d.pdb
 D:\Code_Stuff\projects\code_stuff\Vtuber_2D\vtuber2d\vtuber2d\obj\Debug\net8.0-windows\vtuber2d.genruntimeconfig.cache
 D:\Code_Stuff\projects\code_stuff\Vtuber_2D\vtuber2d\vtuber2d\obj\Debug\net8.0-windows\ref\vtuber2d.dll
+D:\Code_Stuff\projects\code_stuff\Vtuber_2D\vtuber2d\vtuber2d\obj\Debug\net8.0-windows\Screens\SelectScreen.g.cs
+D:\Code_Stuff\projects\code_stuff\Vtuber_2D\vtuber2d\vtuber2d\obj\Debug\net8.0-windows\Screens\SelectScreen.baml

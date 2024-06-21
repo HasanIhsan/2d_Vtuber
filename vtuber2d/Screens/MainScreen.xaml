@@ -6,15 +6,18 @@
              xmlns:local="clr-namespace:vtuber2d.Screens"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="LightBlue">
-        <Button Content="setup" Command="{Binding NavigateToSetupCOmmand}" Margin="614,32,24,330"/>
+    <Grid x:Name="mainScreenGrid" Background="White">
+        <Button x:Name="setupScreenBtn" Content="setup" Command="{Binding NavigateToSetupCOmmand}" Margin="614,32,24,330"/>
         <Label x:Name="audioLabel" Content="Audio Detected" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="204,21,0,0" Visibility="Hidden"/>
 
         <ComboBox x:Name="inputDevicesComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
             <!-- The items will be added dynamically in code-behind -->
         </ComboBox>
-        <Button Content="Select Input Device" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,30,0,0" Click="SelectInputDevice_Click"/>
+        <Button x:Name="SelectDeviceBtn" Content="Select Input Device" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,30,0,0" Click="SelectInputDevice_Click"/>
 
         <Image x:Name="vtuber" HorizontalAlignment="Left" Height="153" Margin="38,132,0,0" VerticalAlignment="Top" Width="179" MouseDown="Image_MouseDown" MouseMove="Image_MouseMove" MouseUp="Image_MouseUp" MouseWheel="Image_MouseWheel"/>
+        <CheckBox x:Name="GCheckBox" IsChecked="False" Checked="GCheckBox_Checked" Unchecked="GCheckBox_Unchecked" HorizontalAlignment="Left" Margin="750,10,0,0" VerticalAlignment="Top" Height="104" Width="141"/>
+
+
     </Grid>
 </UserControl>

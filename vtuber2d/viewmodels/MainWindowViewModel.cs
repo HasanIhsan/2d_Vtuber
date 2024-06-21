@@ -9,8 +9,10 @@ namespace vtuber2d.viewmodels
 {
     public class MainWindowViewModel : ViewModelBase
     {
-        private ViewModelBase? _currentviewModel;
+        
         private NavigationHandler? _handler;
+
+        private ViewModelBase? _currentviewModel;
 
         public ViewModelBase CurrentViewModel
         {
@@ -29,7 +31,7 @@ namespace vtuber2d.viewmodels
             NavigaionService._navigate += _handler.Navigate;
 
             //set intial
-            _handler.Navigate("setup_Screen");
+            _handler.Navigate("select_Screen");
         }
 
     }

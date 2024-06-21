@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace vtuber2d.storing_Pictures
 {
-    public class pictures
+    public class Pictures
     {
-        private static pictures _pictureInstance;
+        private static Pictures? _pictureInstance;
 
-        private OpenFileDialog _openFileDialog;
+        private OpenFileDialog? _openFileDialog;
 
 
         //filter 
@@ -24,13 +24,13 @@ namespace vtuber2d.storing_Pictures
 
         //creating a singleton to make the variable accesable to all files
         //rather then passing the same variable over and over again
-        public static pictures Instance
+        public static Pictures Instance
         {
             get
             {
                 if(_pictureInstance == null)
                 {
-                    _pictureInstance = new pictures();
+                    _pictureInstance = new Pictures();
                 }
                 return _pictureInstance;
             }
