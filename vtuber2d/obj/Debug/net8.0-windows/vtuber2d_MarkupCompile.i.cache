@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\Code_Stuff\projects\code_stuff\Vtuber_2D\vtuber2d\vtuber2d\App.xaml
-5427980093
+61903445161
 
-1986536957
-202-1405109032
-MainWindow.xaml;Screens\MainScreen.xaml;Screens\SelectScreen.xaml;Screens\SetupScreen.xaml;ViewModelDataTemplates.xaml;
+21191854204
+2021303055794
+MainWindow.xaml;Screens\faceModelScreen.xaml;Screens\MainScreen.xaml;Screens\SelectScreen.xaml;Screens\SetupScreen.xaml;ViewModelDataTemplates.xaml;
 
 True
 

@@ -11,12 +11,21 @@ namespace vtuber2d.viewmodels
     public class SelectScreenViewModel : ViewModelBase
     {
         private RelayCommand? _navigateToPNGSetupScreen;
+        private RelayCommand? _navigateToFaceModelScreen;
 
         public RelayCommand NavigateToPNGMainScreenCOmmand
         {
             get
             {
                 return _navigateToPNGSetupScreen ?? (_navigateToPNGSetupScreen = new RelayCommand(NavigationHandler.GetNavigationAction("setup_Screen")));
+            }
+        }
+
+        public RelayCommand NavigateTofaceModelScreenCommand
+        {
+            get 
+            {
+                return _navigateToFaceModelScreen ?? (_navigateToFaceModelScreen = new RelayCommand(NavigationHandler.GetNavigationAction("face_Screen")));
             }
         }
     }

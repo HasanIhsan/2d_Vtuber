@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
               d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="white">
-        <Button x:Name="live2tuber"  Content="Live2Dtuber" HorizontalAlignment="Center" Margin="0,153,0,0" VerticalAlignment="Top" Height="61" Width="202"/>
+		<Button x:Name="live2tuber"  Content="Live2Dtuber" Command="{Binding NavigateTofaceModelScreenCommand}" HorizontalAlignment="Center" Margin="0,153,0,0" VerticalAlignment="Top" Height="61" Width="202"/>
         <Button x:Name="pngtuber"  Content="PNGtuber" Command="{Binding NavigateToPNGMainScreenCOmmand}" HorizontalAlignment="Center" Margin="0,246,0,0" VerticalAlignment="Top" Height="61" Width="202"/>
         
         <!--<Button Content="MainScreen" Command="{Binding NavigateToMainScreenCOmmand}" Margin="578,345,22,44" />-->
