@@ -109,7 +109,7 @@ namespace vtuber2d.Screens {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/vtuber2d;component/screens/mainscreen.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/vtuber2d;V1.0.0.0;component/screens/mainscreen.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Screens\MainScreen.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
