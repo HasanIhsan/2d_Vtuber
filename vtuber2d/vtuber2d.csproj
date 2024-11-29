@@ -19,7 +19,12 @@
 
   <ItemGroup>
     <PackageReference Include="AudioSwitcher.AudioApi.CoreAudio" Version="3.0.3" />
+    <PackageReference Include="pythonnet" Version="3.0.4" />
     <PackageReference Include="System.Speech" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="pythonTracking\" />
   </ItemGroup>
 
 </Project>

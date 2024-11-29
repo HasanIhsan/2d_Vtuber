@@ -74,3 +74,4 @@ D:\Code_Stuff\projects\code_stuff\Vtuber_2D\vtuber2d\vtuber2d\obj\Debug\net8.0-w
 D:\Code_Stuff\projects\code_stuff\Vtuber_2D\vtuber2d\vtuber2d\obj\Debug\net8.0-windows\Screens\SelectScreen.baml
 D:\Code_Stuff\projects\code_stuff\Vtuber_2D\vtuber2d\vtuber2d\obj\Debug\net8.0-windows\Screens\faceModelScreen.g.cs
 D:\Code_Stuff\projects\code_stuff\Vtuber_2D\vtuber2d\vtuber2d\obj\Debug\net8.0-windows\Screens\faceModelScreen.baml
+D:\Code_Stuff\projects\code_stuff\Vtuber_2D\vtuber2d\vtuber2d\bin\Debug\net8.0-windows\Python.Runtime.dll

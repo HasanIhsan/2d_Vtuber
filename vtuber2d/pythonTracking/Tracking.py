@@ -1,5 +1,7 @@
 import mediapipe as mp
 import cv2
+import sys
+print(sys.path)
 
 def get_tracking_data():
     """
@@ -64,6 +66,48 @@ def get_tracking_data():
     cap.release()
     cv2.destroyAllWindows()
 
+latest_data = None
+
+def start_tracking():
+    global latest_data
+    mp_drawing = mp.solutions.drawing_utils
+    mp_holistic = mp.solutions.holistic
+    mp_face_mesh = mp.solutions.face_mesh
+
+    cap = cv2.VideoCapture(0)  # Initialize webcam
+
+    with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as holistic:
+        while cap.isOpened():
+            ret, frame = cap.read()
+            if not ret:
+                print("Failed to grab frame.")
+                break
+
+            # Process data
+            image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            results = holistic.process(image)
+            latest_data = {
+                "face_landmarks": results.face_landmarks,
+                "pose_landmarks": results.pose_landmarks,
+                "left_hand_landmarks": results.left_hand_landmarks,
+                "right_hand_landmarks": results.right_hand_landmarks,
+            }
+
+            # Render video
+            image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
+            cv2.imshow("Tracking", image)
+            if cv2.waitKey(10) & 0xFF == ord('q'):
+                break
+
+    cap.release()
+    cv2.destroyAllWindows()
+
+def get_latest_data():
+    """
+    Returns the latest tracking data processed by start_tracking.
+    """
+    return latest_data
+    
 if __name__ == "__main__":
     for frame_data in get_tracking_data():
         # Example: Print face landmarks in real-time

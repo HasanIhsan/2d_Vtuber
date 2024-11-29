@@ -9,7 +9,7 @@
 	<Grid x:Name="FaceScreenGrid" Background="White">
 		<Button x:Name="bkbtn" Content="select screen" Command="{Binding NavigateToSelectScreenCommand}" HorizontalAlignment="Left" Height="37" Margin="41,32,0,0" VerticalAlignment="Top" Width="91"/>
 		<Button x:Name="mdlbtn" Content="select model" HorizontalAlignment="Left" Margin="646,338,0,0" VerticalAlignment="Top" Height="50" Width="115"/>
-		<Button x:Name="trkbtn" Content="start Tracking" HorizontalAlignment="Left" Margin="518,338,0,0" VerticalAlignment="Top" Height="50" Width="108"/>
+		<Button x:Name="trkbtn" Content="start Tracking" HorizontalAlignment="Left" Margin="518,338,0,0" VerticalAlignment="Top" Height="50" Width="108" Click="Trackingbtn_Click"/>
 
 
 	</Grid>
