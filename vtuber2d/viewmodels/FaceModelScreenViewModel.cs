@@ -10,13 +10,12 @@ namespace vtuber2d.viewmodels
 {
     public class FaceModelScreenViewModel : ViewModelBase
     {
-        private RelayCommand? _navigateToFaceModelCommand;
-
-        public RelayCommand NavigateToFaceModelCommand
+        private RelayCommand? _navigateToSelectScreenCommand;
+        public RelayCommand NavigateToSelectScreenCommand
         {
             get
             {
-                return _navigateToFaceModelCommand ?? (_navigateToFaceModelCommand = new RelayCommand(NavigationHandler.GetNavigationAction("face_Screen")));
+                return _navigateToSelectScreenCommand ?? (_navigateToSelectScreenCommand = new RelayCommand(NavigationHandler.GetNavigationAction("select_Screen")));
             }
         }
     }
